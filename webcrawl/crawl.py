@@ -5,9 +5,12 @@ import os
 import shutil
 import re
 
+url = []
 f = open("data.txt", "r")
-time = (int(f.read())/60)
+data = f.readlines()
 f.closed
+time = (int(data[0])/60)
+url.append(data[1])
 d = datetime.today() + timedelta(hours=0, minutes=time)
 
 if os.path.isdir(os.getcwd()+"\\thư mục chứa file"):
@@ -15,8 +18,7 @@ if os.path.isdir(os.getcwd()+"\\thư mục chứa file"):
 
 os.mkdir("thư mục chứa file")
 add = os.getcwd()
-url = ["https://vietnamnet.vn/"]
-url_goc = "https://vietnamnet.vn/"
+url_goc = url[0]
 
 
 def link(ad):

@@ -16,7 +16,7 @@ def fin():
     size = 0
     
     f = open("data.txt", "r")
-    time = int(f.read())
+    time = int(f.readlines()[0])
     f.closed
     
     for dirpath, dirnames, filenames in (os.walk(os.getcwd()+"\\thư mục chứa file")):

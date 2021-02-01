@@ -13,7 +13,7 @@ VV = (204,204,255)
 GR = (64,224,208)
 
 f = open("data.txt", "r")
-input = int(f.read())
+input = int(f.readlines()[0])
 f.closed
 
 b= input +1

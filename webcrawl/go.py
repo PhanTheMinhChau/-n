@@ -1,6 +1,7 @@
 from subprocess import run
 from threading import Thread
 
+
 def gocr():
     
     def func1():
