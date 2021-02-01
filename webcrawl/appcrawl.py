@@ -74,6 +74,9 @@ while True:
                f = open("data.txt", "w")
                f.writelines(str(a))
                f.close()
+               f = open("data.txt", "a")
+               f.writelines("\n" + url)
+               f.close()
                go.gocr()
                pygame.quit()
         if event.type == pygame.MOUSEBUTTONDOWN:
