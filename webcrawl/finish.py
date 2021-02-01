@@ -5,7 +5,7 @@ from subprocess import Popen
 def fin():
     pygame.init()
     screen = pygame.display.set_mode((1000,600))
-    pygame.display.set_caption('Crawl VTV go website')
+    pygame.display.set_caption('Finish Crawl website')
     white = (255,255,255)
     BLACK = (0,0,0)
     VV = (204,204,255)
@@ -28,7 +28,8 @@ def fin():
     font1 = pygame.font.Font('fonts.ttf', 20)
     
     gameDisplay = pygame.display.set_mode((1000,600))
-    carImg = pygame.image.load('vtv.png')
+    Img = pygame.image.load('vtv.png')
+    carImg = pygame.transform.scale(Img, (320,200))
     text1 = font.render("FINISH!", True, BLACK)
     text2 = font1.render("Nơi chứa các file html:", True, BLACK)
     text3 = font1.render("Tổng số file:", True, BLACK)
@@ -58,7 +59,7 @@ def fin():
         screen.blit(text8, (50,400))
         screen.blit(text10, (210,500))
         
-        gameDisplay.blit(carImg, (4,4))
+        gameDisplay.blit(carImg, (130,4))
         
         for event in pygame.event.get():
             if event.type == pygame.QUIT:

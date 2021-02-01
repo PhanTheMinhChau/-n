@@ -6,7 +6,7 @@ import finish
 
 pygame.init()
 screen = pygame.display.set_mode((1000,600))
-pygame.display.set_caption('Crawling... VTV go website')
+pygame.display.set_caption('Crawling... website')
 white = (255,255,255)
 BLACK = (0,0,0)
 VV = (204,204,255)
@@ -27,7 +27,8 @@ te3 = "crawling.."
 te4 = "crawling..."
 
 gameDisplay = pygame.display.set_mode((1000,600))
-carImg = pygame.image.load('vtv.png')
+Img = pygame.image.load('vtv.png')
+carImg = pygame.transform.scale(Img, (320,200))
 
 pygame.event.get()
 
@@ -40,7 +41,7 @@ while True:
     pygame.draw.rect(screen, GR, (245,415,(540/(b))*d,30))
     screen.blit(text1, (350,220))
     screen.blit(text2, (550,220))
-    gameDisplay.blit(carImg, (290,4))
+    gameDisplay.blit(carImg, (320,4))
     mouse_x, mouse_y = pygame.mouse.get_pos()
     
     if a%10 == 0:

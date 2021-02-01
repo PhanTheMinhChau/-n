@@ -10,22 +10,23 @@ BLACK = (0,0,0)
 VV = (204,204,255)
 
 a = 30
-font = pygame.font.SysFont('sans', 50)
+font = pygame.font.Font('fonts.ttf', 50)
 font1 = pygame.font.SysFont('sans', 25)
 
 text5 = font.render("CRAWL", True, BLACK)
 gameDisplay = pygame.display.set_mode((1000, 600))
 os.chdir(os.getcwd())
-carImg = pygame.image.load('vtv.png')
+Img = pygame.image.load('vtv.png')
+carImg = pygame.transform.scale(Img, (320,200))
 
 while True:
     screen.fill(VV)
-    gameDisplay.blit(carImg, (3, 4))
+    gameDisplay.blit(carImg, (60, 4))
     mouse_x, mouse_y = pygame.mouse.get_pos()
     if a<=2:
         a = 2
     text1 = font1.render("https://vtvgo.vn/kho-video.html", True, BLACK)
-    text2 = font.render("Kho chuong trinh VTV go", True, BLACK)
+    text2 = font.render("Đồ án crawler website", True, BLACK)
     text3 = font1.render("thoi gian crawl:", True, BLACK)
     text4 = font1.render(str(a)+"(s)", True, BLACK)
     text6 = font1.render("+", True, BLACK)
