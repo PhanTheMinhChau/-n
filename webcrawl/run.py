@@ -31,12 +31,12 @@ Img = pygame.image.load('vtv.png')
 carImg = pygame.transform.scale(Img, (320,200))
 
 pygame.event.get()
+i = 1
 
 while True:
     screen.fill(VV)
     text1 = font.render(te, True, BLACK)
     text2 = font.render(str(c)+"(s)", True, BLACK)
-    i = randint(1, 4)
     pygame.draw.rect(screen, white, (240,410,550,40))
     pygame.draw.rect(screen, GR, (245,415,(540/(b))*d,30))
     screen.blit(text1, (350,220))
@@ -50,6 +50,8 @@ while True:
     if a == b*10:
         finish.fin()
         pygame.quit()
+    if i == 5:
+        i = 1
     if i == 1:
         te = te1
     if i == 2:
@@ -62,6 +64,7 @@ while True:
         pass
             
     sleep(0.0963)
+    i = i+1
     a = a+1
     
     pygame.display.flip()

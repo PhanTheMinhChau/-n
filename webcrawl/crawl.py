@@ -55,7 +55,7 @@ for item in url:
                 f = open("file"+str(n)+"-"+titles+".html","x",encoding="utf-8")
                 f.write(html)
             except:
-                f = open("file"+str(n), "x",encoding="utf-8")
+                f = open("file"+str(n)+".html", "x",encoding="utf-8")
                 f.write(html)
         os.chdir(add)
         n = n+1
